@@ -35,5 +35,11 @@ h1 {
   background-position: center;
 }
 
-.slider-container {
+.color-area {
+  height: 300px;
+  width: 200px;
+}
+
+section > p {
+  text-align: center;
 }
