@@ -4,17 +4,26 @@ export default function Slider(props) {
   const [hue, setHue] = useState(props.randomHue)
   const [saturation, setSaturation] = useState(props.randomSaturation)
   const [lightness, setLightness] = useState(props.randomLightness)
-  const [alpha, setAlpha] = useState(props.randomAlpha)
+  const [alpha, setAlpha] = useState(1)
 
+  const randomColor = () => {
+    setHue(Math.ceil(Math.random() * 360))
+    setSaturation(Math.ceil(Math.random() * 100))
+    setLightness(Math.ceil(Math.random() * 100))
+    setAlpha(1)
+  }
+
+  console.log({ alpha })
   return (
     <>
       <main className="main-container">
         <h1>HSL color picker</h1>
+        <button onClick={() => randomColor()}>Random color!</button>
         <div className="color-container">
           <section
             className="color-area"
             style={{
-              backgroundColor: `hsl(${hue},${saturation}%,${lightness}%, 0.${alpha})`
+              backgroundColor: `hsl(${hue},${saturation}%,${lightness}%, ${alpha})`
             }}
           />
         </div>
@@ -51,11 +60,12 @@ export default function Slider(props) {
             />
           </section>
           <section>
-            <p>A: {alpha}%</p>
+            <p>A: {alpha}</p>
             <input
               type="range"
-              min="1"
-              max="99"
+              min="0"
+              max="1"
+              step="0.01"
               value={alpha}
               onChange={e => setAlpha(e.target.value)}
             />
