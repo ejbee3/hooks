@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -9,4 +11,29 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: #f3eff5;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+}
+
+.main-container,
+.slider-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.color-container {
+  height: 300px;
+  width: 200px;
+  border: 3px solid black;
+  background-image: url('./images/GW-logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-container {
 }
