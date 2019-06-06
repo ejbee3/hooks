@@ -13,4 +13,4 @@ The project was to make a simple HSL (Hue, Saturation, Lightness) slider to pick
 
 ## Screenshot
 
-(images/Kapture 2019-06-05 at 22.23.36.gif)
+(./images/Kapture 2019-06-05 at 22.23.36.gif)
